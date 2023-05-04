@@ -122,7 +122,7 @@ sub is28
         On Error GoTo err
         cursor = thiscomponent.currentController.getViewCursor()
         originFont = cursor.charFontNameAsian
-        cursor.charFontNameAsian = &quot;Wingdings 2&quot;
+        cursor.charFontNameAsian = &quot;Unifont&quot;
 		&apos;
         InsertWD2(symbolAt(28))
         cursor.charFontNameAsian = originFont
@@ -151,7 +151,7 @@ sub is29
         On Error GoTo err
         cursor = thiscomponent.currentController.getViewCursor()
         originFont = cursor.charFontNameAsian
-        cursor.charFontNameAsian = &quot;Wingdings 2&quot;
+        cursor.charFontNameAsian = &quot;Unifont&quot;
 		&apos;
         InsertWD2(symbolAt(29))
         cursor.charFontNameAsian = originFont
@@ -180,7 +180,7 @@ sub is30
         On Error GoTo err
         cursor = thiscomponent.currentController.getViewCursor()
         originFont = cursor.charFontNameAsian
-        cursor.charFontNameAsian = &quot;Wingdings 2&quot;
+        cursor.charFontNameAsian = &quot;Unifont&quot;
 		&apos;
         InsertWD2(symbolAt(30))
         cursor.charFontNameAsian = originFont
@@ -209,7 +209,7 @@ sub is31
         On Error GoTo err
         cursor = thiscomponent.currentController.getViewCursor()
         originFont = cursor.charFontNameAsian
-        cursor.charFontNameAsian = &quot;Wingdings 2&quot;
+        cursor.charFontNameAsian = &quot;Unifont&quot;
 		&apos;
         InsertWD2(symbolAt(31))
         cursor.charFontNameAsian = originFont
@@ -277,7 +277,7 @@ Function symbolAt(index as Integer) As String
 	Static SymbolArray()  
 	if (UBound(SymbolArray()) &lt; 1) then	
 		SymbolArray = Array( &quot;，&quot;,&quot;。&quot;,&quot;、&quot;,&quot;；&quot;,&quot;：&quot;,&quot;！&quot;,&quot;？&quot;,&quot;（）&quot;,&quot;〔〕&quot;,&quot;【】&quot;,&quot;「」&quot;,&quot;『』&quot;,&quot;〈〉&quot;,&quot;《》&quot;,&quot;‘’&quot;,&quot;“”&quot; , _
-		&quot;…&quot;,&quot;‥&quot;,&quot;‧&quot;,	&quot;—&quot;, &quot;＿&quot;, &quot;∕&quot;, &quot;※&quot;, &quot;￥&quot;, &quot;□&quot;, &quot;■&quot; , &quot;○&quot;, &quot;●&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;＋&quot;, &quot;－&quot;, &quot;×&quot; ,&quot;÷&quot; , &quot;→&quot;, &quot;←&quot;, &quot;↑&quot;, &quot;↓&quot;, &quot;℃&quot;, &quot;℉&quot;)
+		&quot;…&quot;,&quot;‥&quot;,&quot;‧&quot;,	&quot;—&quot;, &quot;＿&quot;, &quot;∕&quot;, &quot;※&quot;, &quot;￥&quot;, &quot;□&quot;, &quot;■&quot; , &quot;○&quot;, &quot;●&quot;, &quot;☑&quot;, &quot;☒&quot;, &quot;✔&quot;, &quot;✕&quot;, &quot;＋&quot;, &quot;－&quot;, &quot;×&quot; ,&quot;÷&quot; , &quot;→&quot;, &quot;←&quot;, &quot;↑&quot;, &quot;↓&quot;, &quot;℃&quot;, &quot;℉&quot;)
 	end if
 	symbolAt = SymbolArray(index)
 End Function
@@ -356,7 +356,7 @@ Function InsertWD2(Symbols as String)
 	args1(0).Name = &quot;Symbols&quot;
 	args1(0).Value = Symbols
 	args1(1).Name = &quot;FontName&quot;
-	args1(1).Value = &quot;Wingdings 2&quot;
+	args1(1).Value = &quot;Unifont&quot;
 	&apos;
 	dispatcher.executeDispatch(document, &quot;.uno:InsertSymbol&quot;, &quot;&quot;, 0, args1())
 end Function
