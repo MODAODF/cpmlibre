@@ -400,9 +400,15 @@ Function GetOriginFont(family as String) As String
 	&apos;
 	oDoc = ThisComponent
 	oSel = oDoc.CurrentController.getSelection()
-	oCellAddr = oSel.getCellAddress()	
-	oActCol = oCellAddr.Column
-	oActRow = oCellAddr.Row
+	if (oSel.getImplementationName = "ScCellRangeObj") then
+		oCellAddr = oSel.getRangeAddress()
+		oActCol = oCellAddr.StartColumn
+		oActRow = oCellAddr.StartRow
+	else 'Assume it is a single Cell (ScCellObj)
+		oCellAddr = oSel.getCellAddress()
+		oActCol = oCellAddr.Column
+		oActRow = oCellAddr.Row
+	endif
 	oShtNo = oCellAddr.Sheet
 	&apos;
 	oSheet = oDoc.getSheets().getByIndex(oShtNo)
