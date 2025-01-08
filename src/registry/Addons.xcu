@@ -31,7 +31,8 @@ oor:package="org.openoffice.Office">
                     <value xml:lang="en-US">Chinese Punctuation Marks</value>
                     <value xml:lang="zh-TW">中文標點符號工具列</value>
                 </prop>
-                <node oor:name="ToolBarItems">
+<!-- Remove ToolBarItems because it seems not worked on Tabbed UI after 24.2? -->
+<!--                <node oor:name="ToolBarItems"> -->
                     <node oor:name="B00" oor:op="replace">
                         <prop oor:name="Context" oor:type="xs:string">
                             <value>com.sun.star.text.TextDocument,com.sun.star.sheet.SpreadsheetDocument,com.sun.star.presentation.PresentationDocument,com.sun.star.drawing.DrawingDocument</value>
@@ -665,9 +666,10 @@ oor:package="org.openoffice.Office">
                             <value>_self</value>
                         </prop>
                     </node>
-                </node>
-            </node>
-        </node>
+<!--                </node> --> <!-- ToolBarItem -->
+            </node> <!-- addons.cpm.toolbar1 -->
+        </node> <!--OfficeToolBar -->
+
         <node oor:name="Images">
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images0" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
@@ -680,21 +682,21 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc00.png</value>
                     </prop>
-                </node>
-            </node>           
+                </node> <!-- UserDefinedImages -->
+	    </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images0 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images1" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is01?language=Basic&amp;location=application</value>
                 </prop>
                 <node oor:name="UserDefinedImages">
-                    <prop oor:name="ImageSmallURL" oor:type="xs:string">
-                        <value>%origin%/../icons/lc01.png</value>
-                    </prop>
-                    <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
-                        <value>%origin%/../icons/lc01.png</value>
-                    </prop>
-                </node>
-            </node>
+                   <prop oor:name="ImageSmallURL" oor:type="xs:string">
+                       <value>%origin%/../icons/lc01.png</value>
+                   </prop>
+                   <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
+                       <value>%origin%/../icons/lc01.png</value>
+                   </prop>
+		</node> <!-- UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images1 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images2" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is02?language=Basic&amp;location=application</value>
@@ -706,8 +708,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc02.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images2 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images3" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is03?language=Basic&amp;location=application</value>
@@ -719,8 +721,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc03.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images3 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images4" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is04?language=Basic&amp;location=application</value>
@@ -732,8 +734,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc04.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images4 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images5" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is05?language=Basic&amp;location=application</value>
@@ -745,8 +747,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc05.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images5 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images6" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is06?language=Basic&amp;location=application</value>
@@ -758,8 +760,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc06.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images6 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images7" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is07?language=Basic&amp;location=application</value>
@@ -771,8 +773,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc07.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images7 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images8" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is08?language=Basic&amp;location=application</value>
@@ -784,8 +786,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc08.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images8 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images9" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is09?language=Basic&amp;location=application</value>
@@ -797,8 +799,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc09.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images9 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images10" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is10?language=Basic&amp;location=application</value>
@@ -810,8 +812,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc10.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images10 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images11" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is11?language=Basic&amp;location=application</value>
@@ -823,8 +825,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc11.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images11 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images12" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is12?language=Basic&amp;location=application</value>
@@ -836,8 +838,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc12.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images12 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images13" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is13?language=Basic&amp;location=application</value>
@@ -849,8 +851,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc13.png</value>
                     </prop>
-                </node>
-            </node>
+                </node>  <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images13 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images14" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is14?language=Basic&amp;location=application</value>
@@ -862,8 +864,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc14.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images14 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images15" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is15?language=Basic&amp;location=application</value>
@@ -875,8 +877,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc15.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images15 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images16" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is16?language=Basic&amp;location=application</value>
@@ -888,8 +890,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc16.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images16 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images17" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is17?language=Basic&amp;location=application</value>
@@ -901,8 +903,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc17.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images17 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images18" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is18?language=Basic&amp;location=application</value>
@@ -914,8 +916,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc18.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images18 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images19" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is19?language=Basic&amp;location=application</value>
@@ -927,8 +929,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc19.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images19 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images20" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is20?language=Basic&amp;location=application</value>
@@ -940,8 +942,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc20.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images20 -->
   
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images21" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
@@ -954,8 +956,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc21.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images21 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images22" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is22?language=Basic&amp;location=application</value>
@@ -967,8 +969,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc22.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images22 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images23" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is23?language=Basic&amp;location=application</value>
@@ -980,8 +982,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc23.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images23 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images24" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is24?language=Basic&amp;location=application</value>
@@ -993,8 +995,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc24.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images24 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images25" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is25?language=Basic&amp;location=application</value>
@@ -1006,8 +1008,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc25.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images25 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images26" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is26?language=Basic&amp;location=application</value>
@@ -1019,8 +1021,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc26.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images26 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images27" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is27?language=Basic&amp;location=application</value>
@@ -1032,8 +1034,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc27.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images27 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images28" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is28?language=Basic&amp;location=application</value>
@@ -1045,8 +1047,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc28.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images28 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images29" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is29?language=Basic&amp;location=application</value>
@@ -1058,8 +1060,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc29.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images29 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images30" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is30?language=Basic&amp;location=application</value>
@@ -1071,8 +1073,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc30.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images30 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images31" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is31?language=Basic&amp;location=application</value>
@@ -1084,8 +1086,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc31.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images31 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images32" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is32?language=Basic&amp;location=application</value>
@@ -1097,8 +1099,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc32.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images32 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images33" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is33?language=Basic&amp;location=application</value>
@@ -1110,8 +1112,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc33.png</value>
                     </prop>
-                </node>
-            </node>  
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images33 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images34" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is34?language=Basic&amp;location=application</value>
@@ -1123,8 +1125,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc34.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images34 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images35" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is35?language=Basic&amp;location=application</value>
@@ -1136,8 +1138,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc35.png</value>
                     </prop>
-                </node>
-            </node>  
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images35 --> 
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images36" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is36?language=Basic&amp;location=application</value>
@@ -1149,8 +1151,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../icons/lc36.png</value>
                     </prop>
-                </node>
-            </node>  
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images36 --> 
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images37" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is37?language=Basic&amp;location=application</value>
@@ -1162,8 +1164,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../iconsb/lc37.png</value>
                     </prop>
-                </node>
-            </node>  
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images37 -->   
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images38" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is38?language=Basic&amp;location=application</value>
@@ -1175,8 +1177,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../iconsb/lc38.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images38 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images39" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is39?language=Basic&amp;location=application</value>
@@ -1188,8 +1190,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../iconsb/lc39.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images39 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images40" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is40?language=Basic&amp;location=application</value>
@@ -1201,8 +1203,8 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../iconsb/lc40.png</value>
                     </prop>
-                </node>
-            </node>
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images40 -->
             <node oor:name="org.apache.openoffice.framework.addons.ToolbarWithWindowState.images41" oor:op="replace">
                 <prop oor:name="URL" oor:type="xs:string">
                     <value>vnd.sun.star.script:ZHTWPunctuation.SymbolTools.is41?language=Basic&amp;location=application</value>
@@ -1214,9 +1216,9 @@ oor:package="org.openoffice.Office">
                     <prop oor:name="ImageSmallHCURL" oor:type="xs:string">
                         <value>%origin%/../iconsb/lc41.png</value>
                     </prop>
-                </node>
-            </node>  
+                </node> <!--UserDefinedImages -->
+            </node> <!-- org.apache.openoffice.framework.addons.ToolbarWithWindowState.images41 -->
 
-        </node>
-    </node>
+        </node> <!-- Images -->
+      </node> <!-- AddonUI -->
 </oor:component-data>
