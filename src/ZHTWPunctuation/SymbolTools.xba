@@ -404,6 +404,9 @@ Function GetOriginFont(family as String) As String
 		oCellAddr = oSel.getRangeAddress()
 		oActCol = oCellAddr.StartColumn
 		oActRow = oCellAddr.StartRow
+	ElseIf (oSel.getImplementationName = "com.sun.star.drawing.SvxShapeCollection") then
+		originFont = thiscomponent.currentController.getSelection().getByIndex(0).getPropertyValue("CharFontNameAsian")
+		Exit Function
 	else 'Assume it is a single Cell (ScCellObj)
 		oCellAddr = oSel.getCellAddress()
 		oActCol = oCellAddr.Column
